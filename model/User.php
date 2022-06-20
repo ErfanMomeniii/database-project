@@ -1,10 +1,9 @@
 <?php
 
-namespace App\model;
-
-use App\model\DbModel;
 use App\repository\ModelDao;
 
+require ('../model/DbModel.php');
+require ('../repository/ModelDao.php');
 class User extends DbModel implements ModelDao
 {
     public $userId;
@@ -59,7 +58,7 @@ class User extends DbModel implements ModelDao
                          ${model['firstName']},${model['lastName']},${model['userName']},
                          ${model['email']},${model['emailStatus']},${model['password']},
                          ${model['phoneNumber']})";
-        $result = mssql_query($query);
+        $result = sqlsrv_query($this->conn,$query);
         return $result;
     }
 }
