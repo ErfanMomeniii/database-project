@@ -4,7 +4,7 @@
     <a href="#" class="btn btn-info" >سامانه آموزشی</a>
     <a href="#" class="btn btn-info">بانک سوالات</a>
     <a href="contest.php" class="btn btn-info">مسابقات</a>
-    <a href="#" class="btn btn-info">مگنت(استخدام)</a>
+    <a href="job_offer.php" class="btn btn-info">مگنت(استخدام)</a>
 </div>
 
 <?php if (!isset($_SESSION['auth'])){
