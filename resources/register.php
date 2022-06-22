@@ -11,7 +11,7 @@ if(!isset($error) && isset($_POST['username'])){
    $model['email']=$_POST['email'];
    try {
    (new User())->save($model);
-   $_GET['data']='<div class="alert alert-success" role="alert">شما با موفقیت عضو شدید</div>';
+   $_GET['data'].='<div class="alert alert-success" role="alert">شما با موفقیت عضو شدید</div>';
    }catch (Exception $e){
        $error=$e->getMessage();
        header("location: register.php ");

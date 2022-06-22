@@ -5,7 +5,6 @@ class  DbModel
     public $conn;
     public function __construct()
     {
-        phpinfo();
         $username = "sa";
         $password = "yourStrong(!)Password";
         $database = "master";

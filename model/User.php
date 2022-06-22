@@ -34,6 +34,16 @@ class User extends DbModel implements ModelDao
         return $answer;
     }
 
+    public static function findByEmailAndPassword($email,$password){
+        $query = "SELECT * FROM User WHERE Email IN ${email} AND UserPassword IN ${password}";
+        $result = mssql_query($query);
+        $answer = [];
+        while ($row = mssql_fetch_row($result)) {
+            $answer[] = $row;
+        }
+        return $answer;
+    }
+
     public function findAll()
     {
         $query = "SELECT * FROM User";
