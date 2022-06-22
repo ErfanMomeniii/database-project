@@ -71,4 +71,3 @@ if (isset($_POST['username'])) {
 </section>';
 }
 include 'main_ui.php';
-include 'main_ui.php';
